@@ -4590,8 +4590,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
+    /* NAVBAR on the top of webpage*/
+    background-color: #40798C;
+    border-color: #93B7BE;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -6316,18 +6317,18 @@ button.close {
   left: 100%;
 }
 .carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 15%;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-  background-color: rgba(0, 0, 0, 0);
-  filter: alpha(opacity=50);
-  opacity: .5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: #40798C;
+    filter: alpha(opacity=50);
+    opacity: .5;
 }
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
@@ -6491,8 +6492,8 @@ button.close {
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
 }
 .clearfix:after,
 .dl-horizontal dd:after,
@@ -6754,5 +6755,6 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+
 }
 /*# sourceMappingURL=bootstrap.css.map */
