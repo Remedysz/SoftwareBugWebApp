@@ -4,6 +4,15 @@
     <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="wwwroot\images\ASPcore.png" />
+    <None Include="wwwroot\images\Auth0.png" />
+    <None Include="wwwroot\images\Bootstrap.png" />
+    <None Include="wwwroot\images\JavaScript.png" />
+    <None Include="wwwroot\images\JQuery.png" />
+    <None Include="wwwroot\images\MVC.png" />
+    <None Include="wwwroot\images\Sqlite.png" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
@@ -18,5 +27,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App_Data\SBDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
