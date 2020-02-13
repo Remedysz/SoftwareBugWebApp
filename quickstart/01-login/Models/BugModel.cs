@@ -22,6 +22,13 @@ namespace SampleMvcAP.Models
         [Display(Name = "Submission By: ")]
         [StringLength(40, ErrorMessage = "Please provide a name within 50 characters.")]
         public string SubmittedBy { get; set; }
+        [Display(Name = "Date: ")]
+        [StringLength(40, ErrorMessage = "Please provide a name within 10 characters.")]
+        public string Date { get; set; }
+        [Display(Name = "Closed / Open: ")]
+        public string Openclosed { get; set; }
+        public object CodeFiles { get; set; }
+
 
     }
 }

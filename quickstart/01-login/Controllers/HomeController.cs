@@ -39,14 +39,7 @@ namespace SampleMvcApp.Controllers
         {
             return View();
         }
-        public IActionResult NewBug()
-        {
-            return View();
-        }
-        public IActionResult ViewBug()
-        {
-            return View();
-        }
+
 
     }
 }

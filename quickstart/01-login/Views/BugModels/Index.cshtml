@@ -1,52 +1,41 @@
 ﻿@model IEnumerable<SampleMvcAP.Models.BugModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bug Cases";
 }
 
-<h2>Index</h2>
+    <h2 class="text-center">Bug Cases:</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BugID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BugTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BugDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SubmittedBy)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BugID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BugTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BugDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubmittedBy)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.BugID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BugID">Details</a> |
-            </td>
-        </tr>
+
+
+@foreach (var item in Model)
+{
+<div class="container-fluid">
+    <div class="panel-group"  style="box-shadow: 0 0 30px #40798C">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title" data-toggle="collapse" href="#@Html.DisplayFor(modelItem => item.BugID)">
+                    <a class="text-center" style="font-size:medium;font-weight:600"><span class="glyphicon glyphicon-warning-sign" style="color:orangered"></span>  @Html.DisplayFor(modelItem => item.BugTitle) ID:@Html.DisplayFor(modelItem => item.BugID)</a>
+                </div>
+            </div>
+            <div id="@Html.DisplayFor(modelItem => item.BugID)" class="panel-collapse collapse">
+                <div class="panel-body">
+
+                    <div style="font-size:small;font-weight:400;color:black">@Html.DisplayFor(modelItem => item.BugDescription)</div>
+                    <div style="font-size:small;font-weight:400;color:black">@Html.DisplayFor(modelItem => item.Date)</div>
+                    <div style="font-size:small;font-weight:400;color:black">@Html.DisplayFor(modelItem => item.Openclosed)</div>
+                    <div style="font-size:small;font-weight:400;color:black">@Html.DisplayFor(modelItem => item.CodeFiles)</div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <h><span class="glyphicon glyphicon-user" style="color:darkorange"></span> @Html.DisplayFor(modelItem => item.SubmittedBy)</h>
+                <a class="pull-right" style="font-size:small;font-weight:600;color:black" asp-action="Delete" asp-route-id="@item.BugID">| Delete </a>
+                <a class="pull-right"  style="font-size:small;font-weight:600;color:black" asp-action="Edit" asp-route-id="@item.BugID"> Edit |</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
 }
-    </tbody>
-</table>
+<p><a asp-action="Create">Create New</a></p>
