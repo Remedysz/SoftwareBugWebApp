@@ -54,7 +54,7 @@ namespace SampleMvcApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BugID,BugTitle,BugDescription,SubmittedBy,Date,Openclosed,CodeFiles")] BugModel bugModel)
+        public async Task<IActionResult> Create([Bind("BugID,BugTitle,BugDescription,SubmittedBy,Date,Openclosed")] BugModel bugModel)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace SampleMvcApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BugID,BugTitle,BugDescription,SubmittedBy,Date,Openclosed,CodeFiles")] BugModel bugModel)
+        public async Task<IActionResult> Edit(int id, [Bind("BugID,BugTitle,BugDescription,SubmittedBy,Date,Openclosed")] BugModel bugModel)
         {
             if (id != bugModel.BugID)
             {

@@ -29,18 +29,14 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Date" class="control-label"></label>
-                    <input asp-for="Date" class="form-control" required />
+                    <input asp-for="Date" class="form-control" aria-describedby="DateHelpBlock" required />
+                    <small id="DateHelpBlock" class="text-muted">Please Insert the date as 01/01/2020 </small>
                     <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Openclosed" class="control-label"></label>
                     <input asp-for="Openclosed" class="form-control" value="Open" readonly />
                     <span asp-validation-for="Openclosed" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CodeFiles" class="control-label"></label>
-                    <input type="file" asp-for="CodeFiles" class="form-control-file" />
-                    <span asp-validation-for="CodeFiles" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary btn-block" style="background-color:#40798C;color:#D1FFD7;font-size:medium" />

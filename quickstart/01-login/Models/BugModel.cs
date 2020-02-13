@@ -27,7 +27,6 @@ namespace SampleMvcAP.Models
         public string Date { get; set; }
         [Display(Name = "Closed / Open: ")]
         public string Openclosed { get; set; }
-        public object CodeFiles { get; set; }
 
 
     }
